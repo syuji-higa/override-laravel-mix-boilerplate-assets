@@ -2,12 +2,11 @@ import '@babel/polyfill'
 import 'intersection-observer'
 import 'custom-event-polyfill'
 import ClientFlagSetter from './views/client-flag-setter'
-import objectFitImages from 'object-fit-images'
 import {
   windowSizeObserver,
   // scrollObserver,
-  inviewportObserver,
-  inviewportScrollObserver
+  inviewportObserver
+  // inviewportScrollObserver
 } from './modules'
 import PageLoader from './views/page-loader'
 import Lazyloader from './views/lazyloader'
@@ -15,17 +14,18 @@ import HeightFitter from './views/height-fitter'
 import Inviewporter from './views/inviewporter'
 import Ignitioner from './views/ignitioner'
 
-new PageLoader().start()
-
 new ClientFlagSetter()
-objectFitImages()
+new PageLoader().start()
 
 windowSizeObserver.on().update()
 // scrollObserver.add(window) // always scroll observe
 inviewportObserver.create()
-inviewportScrollObserver.on()
+// inviewportScrollObserver.on()
 
-new HeightFitter().update().on()
+new HeightFitter()
+  .create()
+  .update()
+  .on()
 
 document.addEventListener(
   'pageLoaded',

@@ -7,11 +7,11 @@
 }
 
 @function grid-pc($num, $parent-num: $grid-split-pc) {
-  @return (100% / $grid-split-pc * $num) / (1 / $grid-split-pc * $parent-num);
+  @return (100% / $parent-num) * $num;
 }
 
 @function grid-sp($num, $parent-num: $grid-split-sp) {
-  @return (100% / $grid-split-sp * $num) / (1 / $grid-split-sp * $parent-num);
+  @return (100% / $parent-num) * $num;
 }
 
 @function contents-grid-pc($num) {

@@ -1,9 +1,12 @@
-@mixin placeholder($width, $height, $bg-color: transparent) {
+@mixin placeholder($width, $height, $bg-color:null) {
   &::after {
     content: "";
     display: block;
     width: 100%;
-    padding-top: $height / $width * 100%;
-    background-color: $bg-color;
+    padding-top: get-percent-size($height, $width);
+
+    @if ($bg-color) {
+      background-color: $bg-color;
+    }
   }
 }
