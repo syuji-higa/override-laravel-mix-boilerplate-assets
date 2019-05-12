@@ -4,8 +4,9 @@ $font-smoothing: antialiased;
 //auto,optimizeSpeed,optimizeLegibility,geometricPrecision
 $text-rendering: auto;
 
-$main-color: #c00;
+$main-color: #00c;
 $base-color: #fff;
+$accent-color: #c00;
 
 $gothic-font-family: "ヒラギノ角ゴ ProN W3",
 "Hiragino Kaku Gothic ProN W3",
@@ -46,12 +47,16 @@ $base-placeholder-color: #989aaf;
 
 $base-background-color: $base-color;
 
+// $selection-background-color: $accent-color;
+// $selection-color: $base-color;
+
 $grid-split-pc: 24;
-$grid-split-sp: 12;
 
-$contents-grid-margin-pc: 2;
-$contents-margin-sp: 30px;
+$grid-split-pc: 24;
+$side-grid-pc: 3;
+$side-space-sp: 15px;
 
+$break-point-sp: 375px;
 $break-point-tb: 768px;
 $break-point-pc: 1024px;
 

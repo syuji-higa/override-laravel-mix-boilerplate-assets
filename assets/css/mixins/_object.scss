@@ -3,7 +3,7 @@
     content: "";
     display: block;
     width: 100%;
-    padding-top: get-percent-size($height, $width);
+    padding-top: get-percent-size($width, $height);
 
     @if ($bg-color) {
       background-color: $bg-color;

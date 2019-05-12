@@ -4,7 +4,8 @@ import ScrollObserver from './modules/scroll-observer'
 import InviewportObserver from './modules/inviewport-observer'
 // import InviewportScrollObserver from './modules/inviewport-scroll-observer'
 import ImagePreloader from './modules/image-preloader'
-// import RequestAnimationFramer from './modules/request-animatino-framer'
+// import RequestAnimationFramer from './modules/request-animation-framer'
+// import Lottie from './modules/lottie'
 
 // Eventer
 export const eventer /* :Instance */ = new Eventer()
@@ -12,7 +13,7 @@ export const eventer /* :Instance */ = new Eventer()
 // WindowSizeObserver
 export const windowSizeObserver /* :Instance */ = new WindowSizeObserver()
 
-// WindowSizeObserver
+// ScrollObserver
 export const scrollObserver /* :Instance */ = new ScrollObserver()
 
 // InviewportObserver
@@ -26,3 +27,6 @@ export const imagePreloader /* :Instance */ = new ImagePreloader()
 
 // RequestAnimationFramer
 // export const requestAnimationFramer /* :Instance */ = new RequestAnimationFramer()
+
+// Lottie
+// export const lottie /* :Instance */ = new Lottie()

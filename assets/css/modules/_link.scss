@@ -1,0 +1,46 @@
+a[class^="m-link-"],
+a[class*=" m-link-"] {
+  display: inline-block;
+
+  :root.is-desktop & {
+    padding: 5px;
+    margin: -5px -5px -5px (-5px + 3px);
+  }
+
+  :root.is-tablet &,
+  :root.is-mobile & {
+    padding: 10px;
+    margin: -10px -10px -10px (-10px + 3px);
+  }
+
+  &::after {
+    display: inline-block;
+  }
+}
+
+/* hover */
+:root.is-desktop a[class^="m-link-"]:hover,
+:root.is-desktop a[class*=" m-link-"]:hover {
+  opacity: .5;
+}
+
+/**
+ * outbound
+ */
+.m-link-outbound {
+  &::after {
+    content: url(#{$img-path}common/ico-outbound.svg);
+
+    @include media-screen-pc {
+      width: 10px;
+      height: 10px;
+      margin-left: 3px;
+    }
+
+    @include media-screen-sp {
+      width: 10px;
+      height: 10px;
+      margin-left: 3px;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+div[class^="m-svg-"],
+div[class*=" m-svg-"],
+span[class^="m-svg-"],
+span[class*=" m-svg-"] {
+  display: block;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+@each $svg in svg-sprite-data() {
+  .m-svg-#{map-get($svg, name)} {
+    &::before {
+      padding-top: get-percent-size(map-get($svg, width), map-get($svg, height));
+    }
+  }
+}

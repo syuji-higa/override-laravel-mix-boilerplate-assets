@@ -1,3 +1,8 @@
+// ::selection {
+//   background-color: $selection-background-color;
+//   color: $selection-color;
+// }
+
 body {
   text-size-adjust: 100%;
   -webkit-font-smoothing: $font-smoothing;
@@ -65,13 +70,4 @@ button {
 
 .svg-sprite {
   display: none;
-}
-
-.js-lazyloader {
-  opacity: 0;
-  transition: .4s opacity;
-}
-
-.js-lazyloader.is-lazyloaded {
-  opacity: 1;
 }

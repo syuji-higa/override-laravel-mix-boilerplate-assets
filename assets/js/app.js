@@ -7,32 +7,40 @@ import {
   // scrollObserver,
   inviewportObserver
   // inviewportScrollObserver
+  // lottie
 } from './modules'
+import HeightFitter from './views/height-fitter'
 import PageLoader from './views/page-loader'
 import Lazyloader from './views/lazyloader'
-import HeightFitter from './views/height-fitter'
 import Inviewporter from './views/inviewporter'
 import Ignitioner from './views/ignitioner'
+import { waitTime } from './utils/wait-time'
 
 new ClientFlagSetter()
-new PageLoader().start()
 
 windowSizeObserver.on().update()
 // scrollObserver.add(window) // always scroll observe
 inviewportObserver.create()
 // inviewportScrollObserver.on()
+// lottie.create().on()
 
 new HeightFitter()
   .create()
-  .update()
   .on()
+  .update()
+
+new PageLoader().start()
 
 document.addEventListener(
   'pageLoaded',
-  () => {
+  async () => {
     new Inviewporter().create().on()
     new Lazyloader().create().on()
     new Ignitioner().create().on()
+
+    await waitTime(1000)
+
+    document.documentElement.classList.add('is-page-readied')
   },
   { once: true }
 )

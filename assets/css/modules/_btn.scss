@@ -1,0 +1,39 @@
+/**
+ * default
+ */
+.m-btn-default {
+
+  a {
+    display: block;
+    background-color: $main-color;
+    position: relative;
+    text-align: center;
+    color: $base-color;
+
+    @include media-screen-pc {
+      padding: 20px;
+    }
+
+    @include media-screen-sp {
+      padding: 10px;
+    }
+  }
+
+  // .me-btn-txt {}
+
+  .me-btn-ico {
+    position: absolute;
+    top: 50%;
+    color: $main-color;
+
+    @include media-screen-pc {
+      margin-top: -(20px / 2);
+      right: 20px;
+    }
+
+    @include media-screen-sp {
+      margin-top: -(20px / 2);
+      right: 10px;
+    }
+  }
+}

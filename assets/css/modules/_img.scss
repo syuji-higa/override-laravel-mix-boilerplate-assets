@@ -1,0 +1,44 @@
+/**
+ * default
+ */
+
+/* animation init */
+:root:not(.no-js) .m-img-default {
+  opacity: 0;
+  transition: opacity .6s $ease-out-org;
+}
+
+/* igntited */
+:root:not(.no-js) .m-img-default.is-lazyloaded {
+  opacity: 1;
+}
+
+/**
+ * rect
+ */
+.m-img-rect {
+  overflow: hidden;
+
+  img {
+    display: block;
+  }
+}
+
+/* animation init */
+:root:not(.no-js) .m-img-rect {
+  img {
+    opacity: 0;
+    transform: scale3d(1.05, 1.05, 1);
+    transition: opacity 1.2s $ease-out-org, transform 1.2s $ease-out-org;
+  }
+}
+
+/* lazyloaded & ignited */
+:root:not(.no-js) .m-img-rect.is-ignited {
+
+  .is-lazyloaded img,
+  img.is-lazyloaded {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
