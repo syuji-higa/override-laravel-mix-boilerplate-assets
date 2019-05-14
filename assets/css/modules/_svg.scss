@@ -2,7 +2,7 @@ div[class^="m-svg-"],
 div[class*=" m-svg-"],
 span[class^="m-svg-"],
 span[class*=" m-svg-"] {
-  display: block;
+  display: inline-block;
   position: relative;
 
   &::before {

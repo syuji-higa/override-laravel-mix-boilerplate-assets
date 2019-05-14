@@ -5,6 +5,7 @@ import InviewportObserver from './modules/inviewport-observer'
 // import InviewportScrollObserver from './modules/inviewport-scroll-observer'
 import ImagePreloader from './modules/image-preloader'
 // import RequestAnimationFramer from './modules/request-animation-framer'
+// import Anchor from './modules/anchor'
 // import Lottie from './modules/lottie'
 
 // Eventer
@@ -27,6 +28,9 @@ export const imagePreloader /* :Instance */ = new ImagePreloader()
 
 // RequestAnimationFramer
 // export const requestAnimationFramer /* :Instance */ = new RequestAnimationFramer()
+
+// Anchor
+// export const anchor /* :Instance */ = new Anchor()
 
 // Lottie
 // export const lottie /* :Instance */ = new Lottie()
